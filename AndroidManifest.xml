@@ -927,7 +927,8 @@
         <activity
                 android:name="Settings$DarkThemeSettingsActivity"
                 android:label="@string/dark_ui_auto_mode_title"
-                android:enabled="true">
+                android:enabled="true"
+            android:exported="true">
             <intent-filter android:priority="32">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.android.settings.SHORTCUT" />
@@ -945,7 +946,8 @@
         <activity
             android:name="Settings$NightDisplaySuggestionActivity"
             android:enabled="@*android:bool/config_nightDisplayAvailable"
-            android:icon="@drawable/ic_suggestion_night_display">
+            android:icon="@drawable/ic_suggestion_night_display"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.android.settings.suggested.category.FIRST_IMPRESSION" />
@@ -964,7 +966,8 @@
 
         <activity android:name=".Settings$MyDeviceInfoActivity"
                   android:label="@string/about_settings"
-                  android:icon="@drawable/ic_homepage_about">
+                  android:icon="@drawable/ic_homepage_about"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.DEVICE_INFO_SETTINGS" />
                 <action android:name="android.settings.DEVICE_NAME" />
@@ -983,7 +986,8 @@
         <activity
             android:name="SettingsLicenseActivity"
             android:label="@string/settings_license_activity_title"
-            android:configChanges="orientation|screenSize">
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.LICENSE" />
                 <category android:name="android.intent.category.DEFAULT" />

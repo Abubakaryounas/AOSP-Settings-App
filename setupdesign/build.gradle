@@ -33,11 +33,6 @@ android {
         }
     }
 
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-
     afterEvaluate {
         generateReleaseBuildConfig.enabled = false
         generateDebugBuildConfig.enabled = false
