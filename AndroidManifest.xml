@@ -125,7 +125,8 @@
                   android:theme="@style/Theme.Settings.Home"
                   android:taskAffinity="com.android.settings.root"
                   android:launchMode="singleTask"
-                  android:configChanges="keyboard|keyboardHidden">
+                  android:configChanges="keyboard|keyboardHidden"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -137,7 +138,8 @@
         <activity android:name=".network.telephony.MobileNetworkActivity"
                   android:label="@string/network_settings_title"
                   android:theme="@style/Theme.Settings.Home"
-                  android:launchMode="singleTask">
+                  android:launchMode="singleTask"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <!-- Displays the MobileNetworkActivity and opt-in dialog for capability discovery. -->
                 <action android:name="android.telephony.ims.action.SHOW_CAPABILITY_DISCOVERY_OPT_IN" />
@@ -162,7 +164,8 @@
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
         </activity-alias>
 
-        <receiver android:name=".SettingsInitialize">
+        <receiver android:name=".SettingsInitialize"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.USER_INITIALIZE"/>
                 <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
@@ -172,7 +175,8 @@
         <activity android:name=".SubSettings"/>
 
         <activity android:name=".Settings$CreateShortcutActivity"
-                  android:label="@string/settings_shortcut">
+                  android:label="@string/settings_shortcut"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -186,7 +190,8 @@
         <activity
             android:name=".Settings$NetworkDashboardActivity"
             android:label="@string/network_dashboard_title"
-            android:icon="@drawable/ic_homepage_network">
+            android:icon="@drawable/ic_homepage_network"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.WIRELESS_SETTINGS" />
                 <action android:name="android.settings.AIRPLANE_MODE_SETTINGS" />
@@ -219,7 +224,8 @@
         <activity
             android:name=".Settings$ConnectedDeviceDashboardActivity"
             android:label="@string/connected_devices_dashboard_title"
-            android:icon="@drawable/ic_homepage_connected_device">
+            android:icon="@drawable/ic_homepage_connected_device"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.BLUETOOTH_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -255,7 +261,8 @@
             android:name="Settings$WifiSettingsActivity"
             android:label="@string/wifi_settings"
             android:icon="@drawable/ic_homepage_network"
-            android:configChanges="orientation|keyboardHidden|screenSize">
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.WIFI_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -290,7 +297,8 @@
         </activity>
 
         <activity
-            android:name=".wifi.WifiPickerActivity">
+            android:name=".wifi.WifiPickerActivity"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.net.wifi.PICK_WIFI_NETWORK" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -303,7 +311,8 @@
             android:name="Settings$ConfigureWifiSettingsActivity"
             android:label="@string/wifi_configure_settings_preference_title"
             android:icon="@drawable/ic_settings_wireless"
-            android:configChanges="orientation|keyboardHidden|screenSize">
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.WIFI_IP_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -323,7 +332,8 @@
             android:name="Settings$SavedAccessPointsSettingsActivity"
             android:label="@string/wifi_saved_access_points_label"
             android:icon="@drawable/ic_settings_wireless"
-            android:configChanges="orientation|keyboardHidden|screenSize">
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.WIFI_SAVED_NETWORK_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -334,7 +344,8 @@
                 android:value="true" />
         </activity>
 
-        <activity android:name=".Settings$WifiInfoActivity">
+        <activity android:name=".Settings$WifiInfoActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEVELOPMENT_PREFERENCE" />
@@ -344,7 +355,8 @@
                        android:value="com.android.settings.wifi.WifiInfo" />
         </activity>
 
-        <activity android:name=".wifi.WifiConfigInfo">
+        <activity android:name=".wifi.WifiConfigInfo"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEVELOPMENT_PREFERENCE" />
@@ -352,7 +364,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Settings$WifiAPITestActivity">
+        <activity android:name=".Settings$WifiAPITestActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEVELOPMENT_PREFERENCE" />
@@ -362,7 +375,8 @@
                        android:value="com.android.settings.wifi.WifiAPITest" />
         </activity>
 
-        <activity android:name=".wifi.WifiStatusTest">
+        <activity android:name=".wifi.WifiStatusTest"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEVELOPMENT_PREFERENCE" />
@@ -391,7 +405,8 @@
         <activity android:name="Settings$ApnSettingsActivity"
                 android:label="@string/apn_settings"
                 android:launchMode="singleTask"
-                android:configChanges="orientation|keyboardHidden|screenSize">
+                android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.APN_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
